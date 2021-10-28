@@ -1,0 +1,54 @@
+version: "3"
+services:
+  php:
+     build:
+       context: .
+       dockerfile: data/php/Dockerfile
+       args:
+           TIMEZONE: ${TIMEZONE}
+     volumes:
+       - ./data/php:/var/www/certbot/symfony/:rw
+       - ./data/certbot/www:/var/www/certbot/
+     expose:
+       - 9000
+     networks:
+       - default
+  nginx:
+     image: nginx:1.15-alpine
+     expose:
+       - "80"
+       - "443"
+     ports:
+       - "80:80"
+       - "443:443"
+     networks:
+       - default
+     volumes:
+       - ./data/nginx:/etc/nginx/conf.d/:rw
+       - ./data/certbot/conf:/etc/letsencrypt/:rw
+       - ./data/certbot/www:/var/www/certbot/:rw
+     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+  mysql:
+     image: mysql:8.0.20
+     command: --default-authentication-plugin=mysql_native_password
+     volumes:
+       - ./data/db_app:/var/lib/mysql:rw
+     environment:
+         MYSQL_ROOT_PASSWORD: Pass
+         MYSQL_DATABASE: DB_Name
+         MYSQL_USER: DB_user
+         MYSQL_PASSWORD: User_pass
+     ports:
+       - "3306:3306"
+     networks:
+       - default
+
+  ##############################
+# Certbot Container
+##############################
+  certbot:
+     image: certbot/certbot:latest
+     volumes:
+       - ./data/certbot/conf:/etc/letsencrypt/:rw
+       - ./data/certbot/www:/var/www/certbot/:rw
+     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
