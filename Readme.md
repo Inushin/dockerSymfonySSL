@@ -27,11 +27,15 @@ It is composed by 4 containers:
 
 4. Run `./init`.
 
-5. Edit `data/nginx/web.conf` with your domain.
+5. Generate your Symfony proyecto goign to `/data/php/symfony` and running `composer create-project symfony/skeleton NAME_OF_THE_PROYECT'
 
-6. Run `docker-compose up -d`
+6. Edit `data/nginx/web.conf` with your domain and youdr proyect dir.
 
-7. The 4 containers are deployed: 
+7. Run `docker-compose down`
+
+8. Run `docker-compose up -d`
+
+9. The 4 containers are deployed: 
 
 ```
 Creating docker_db_1      ... done
@@ -40,7 +44,7 @@ Creating docker_nginx_1   ... done
 Creating docker-certbot-1 ... done
 ```
 
-8. Remember to edit the `env` file at the root of the Symfony's project:
+10. Remember to edit the `env` file at the root of the Symfony's project:
 
 ```
 DATABASE_URL=mysql://db_user_name:db_user_pass@db:3306/db_name?serverVersion=5.7
@@ -61,3 +65,5 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@db:3306/db_name?serverVersion=5.7
 - Enter to a Docker's volumen: `docker-compose exec VolumenID sh` / `docker-compose exec VolumenID bash`
 
 - Copy a file to the docker we want to: `docker cp file docker_id:/dir`
+
+- Remove all unused containers, volumes, networks and images: `docker system prune`
