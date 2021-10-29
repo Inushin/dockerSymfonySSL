@@ -7,7 +7,7 @@ services:
        args:
            TIMEZONE: ${TIMEZONE}
      volumes:
-       - ./data/php:/var/www/certbot/symfony/:rw
+       - ./data/php:/var/www/certbot/phpDir/:rw
        - ./data/certbot/www:/var/www/certbot/
      expose:
        - 9000
