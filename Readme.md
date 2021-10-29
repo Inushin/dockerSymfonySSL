@@ -27,7 +27,7 @@ It is composed by 4 containers:
 
 4. Run `./init`.
 
-5. Generate your Symfony proyecto goign to `/data/php/symfony` and running `composer create-project symfony/skeleton NAME_OF_THE_PROYECT'
+5. Generate your Symfony proyecto goign to `/data/php/symfony` and running `composer create-project symfony/skeleton NAME_OF_THE_PROYECT`
 
 6. Edit `data/nginx/web.conf` with your domain and youdr proyect dir.
 
