@@ -14,7 +14,7 @@ It is composed by 4 containers:
 
 - `nginx`, acting as the webserver.
 - `php`, the PHP-FPM container with the 7.4 PHPversion.
-- `db` which is the MySQL database container with a **MySQL 8.0** image.
+- `mysql` which is the MySQL database container with a **MySQL 8.0** image.
 - `certbot` generates the SSL certificate for your personal domain.
 
 ## Installation
