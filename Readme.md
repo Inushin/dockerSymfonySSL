@@ -47,7 +47,7 @@ Creating docker-certbot-1 ... done
 10. Remember to edit the `env` file at the root of the Symfony's project:
 
 ```
-DATABASE_URL=mysql://db_user_name:db_user_pass@db:3306/db_name?serverVersion=5.7
+DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=5.7
 ```
 
 ## Docker's useful commands
