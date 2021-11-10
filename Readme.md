@@ -21,6 +21,8 @@ It is composed by 4 containers:
 
 ![Docker Installation Illustration](https://user-images.githubusercontent.com/57062736/139102730-d6f51d53-ffb3-44bb-be5e-2bdf48d91295.png)
 
+0. You need ****Docker**** and ****Docker-compose**** where you are going to launch this so, if you do not have it... click [HERE](https://github.com/Inushin/dockerSymfonySSL#installing-docker-docker-compose-and-composer) or go to the end of this `.md` ^^
+
 1. Clone this rep.
 
 2. Check that the dir. `data/certbot/www/.well-known` exist. If it is not, create it 😀.
@@ -29,7 +31,9 @@ It is composed by 4 containers:
 
 4. Run `./init`.
 
-5. Generate your Symfony proyecto goign to `/data/php/symfony` and running `composer create-project symfony/skeleton NAME_OF_THE_PROJECT`
+5. Generate your Symfony proyect going to `/data/php/symfony` and running `composer create-project symfony/skeleton NAME_OF_THE_PROJECT`
+
+5.5 If the step 5 did not work, go to the php volumen `docker-compose exec php bash`. Then, go to symfony folder and run `composer create-project symfony/skeleton NAME_OF_THE_PROJECT`. If you need to install **Composer** click [HERE](https://github.com/Inushin/dockerSymfonySSL#installing-docker-docker-compose-and-composer) or go to the end of this `.md` ^^
 
 6. Edit `data/nginx/web.conf` with your domain and youdr proyect dir.
 
@@ -58,7 +62,7 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 
 - Run Docker-compose: `docker-compose up -d` / `docker-compose up`
 
-- Check Docker-compose's volumens status: `docker-compose ps -a`
+- Check Docker-compose's volumens status: `docker-compose ps -a` / `docker-compose ps`
 
 - Check Docker's images: `docker images -a`
 
@@ -69,3 +73,37 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 - Copy a file to the docker we want to: `docker cp file docker_id:/dir`
 
 - Remove all unused containers, volumes, networks and images: `docker system prune`
+
+## Installing Docker, Docker-compose and Composer
+![Docker-composer](https://user-images.githubusercontent.com/57062736/141182130-b8ed2d7a-9a68-4387-b838-ba0d44bb4e0e.png)
+
+Adjust the installation to your OS. Here you have the one for EC2(AWS) with CentOS
+
+- Docker installation
+
+1. Download and install Docker: `yum install docker
+
+2. Gives permisions so you can run it everywhere: `usermod -a -G docker ec2-user`
+
+3. Starts Docker's service: `service docker start`
+
+4. Starts Docker's service each time you run the SO: `chkconfig docker on`
+
+
+- Docker-compose installation
+
+1. Download and install Docker-compose: `curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+
+2. Make it executable from anywhere: `chmod +x /usr/local/bin/docker-compose`
+
+3. Check the version and the installation: `docker-compose --version`
+
+
+
+- Composer installation
+
+1. Download and install Composer: `curl -sS https://getcomposer.org/installer | sudo php`
+
+2. Moves the config file to the composer dir: `mv composer.phar /usr/local/bin/composer`
+
+3. Makes Composer executable out of the dir with the `composer.phar` file: `ln -s /usr/local/bin/composer /usr/bin/composer`
