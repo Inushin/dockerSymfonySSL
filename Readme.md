@@ -33,7 +33,7 @@ It is composed by 4 containers:
 
 5. Generate your Symfony proyect going to `/data/php/symfony` and running `composer create-project symfony/skeleton NAME_OF_THE_PROJECT`
 
-5.5 If the step 5 did not work, go to the php volumen `docker-compose exec php bash`. Then, go to symfony folder and run `composer create-project symfony/skeleton NAME_OF_THE_PROJECT`. If you need to install **Composer** click [HERE](https://github.com/Inushin/dockerSymfonySSL#installing-docker-docker-compose-and-composer) or go to the end of this `.md` ^^
+6. If the step 5 did not work, go to the php container `docker-compose exec php bash`. Then, go to symfony folder and run `composer create-project symfony/skeleton NAME_OF_THE_PROJECT`. If you need to install **Composer** click [HERE](https://github.com/Inushin/dockerSymfonySSL#installing-docker-docker-compose-and-composer) or go to the end of this `.md` ^^
 
 6. Edit `data/nginx/web.conf` with your domain and youdr proyect dir.
 
@@ -50,11 +50,11 @@ Creating docker_nginx_1   ... done
 Creating docker-certbot-1 ... done
 ```
 
-10. Remember to edit the `env` file at the root of the Symfony's project:
-
+10. Remember to edit the `env` file at the root of the Symfony's project. `mysql` is the name of the container that has your database:
 ```
 DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=5.7
 ```
+
 
 ## Docker's useful commands
 ![Docker Commands Illustration](https://user-images.githubusercontent.com/57062736/139102966-25f28be1-f768-49bd-a8a1-915a8465de9e.png)
