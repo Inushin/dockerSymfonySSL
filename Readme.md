@@ -79,6 +79,8 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 
 Adjust the installation to your OS. Here you have the one for EC2(AWS) with CentOS
 
+
+
 - Docker installation
 
 1. Download and install Docker: `yum install docker
@@ -90,6 +92,8 @@ Adjust the installation to your OS. Here you have the one for EC2(AWS) with Cent
 4. Starts Docker's service each time you run the SO: `chkconfig docker on`
 
 
+
+
 - Docker-compose installation
 
 1. Download and install Docker-compose: `curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
@@ -97,6 +101,7 @@ Adjust the installation to your OS. Here you have the one for EC2(AWS) with Cent
 2. Make it executable from anywhere: `chmod +x /usr/local/bin/docker-compose`
 
 3. Check the version and the installation: `docker-compose --version`
+
 
 
 
