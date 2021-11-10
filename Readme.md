@@ -78,9 +78,7 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 ![Docker-composer](https://user-images.githubusercontent.com/57062736/141182130-b8ed2d7a-9a68-4387-b838-ba0d44bb4e0e.png)
 
 **Adjust the installation to your OS. Here you have the one for EC2(AWS) with CentOS**
-\
-
-
+#
 - Docker installation
 
 1. Download and install Docker: `yum install docker
@@ -90,9 +88,7 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 3. Starts Docker's service: `service docker start`
 
 4. Starts Docker's service each time you run the SO: `chkconfig docker on`
-\
-\
-
+#
 - Docker-compose installation
 
 1. Download and install Docker-compose: `curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
@@ -100,9 +96,10 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 2. Make it executable from anywhere: `chmod +x /usr/local/bin/docker-compose`
 
 3. Check the version and the installation: `docker-compose --version`
-\
-\
+
+#
 - Composer installation
+
 
 1. Download and install Composer: `curl -sS https://getcomposer.org/installer | sudo php`
 
