@@ -4,7 +4,7 @@ If you find this useful, remember about giving a start ⭐ to this repo or share
 
 Edited from `https://github.com/ger86/symfony-docker` version -> `https://github.com/ger86/symfony-docker/tree/fc89a899ac58fb1f6ee5758377c001ad4ef4f389`
 
-## Description
+## Description 📋
 
 ![docker_facebook_share](https://user-images.githubusercontent.com/57062736/139103227-36f3cb32-c3c1-4158-b99e-25a31e955f44.png)
 
@@ -17,7 +17,7 @@ It is composed by 4 containers:
 - `mysql` which is the MySQL database container with a **MySQL 8.0** image.
 - `certbot` generates the SSL certificate for your personal domain.
 
-## Installation
+## Installation ⌨
 
 ![Docker Installation Illustration](https://user-images.githubusercontent.com/57062736/139102730-d6f51d53-ffb3-44bb-be5e-2bdf48d91295.png)
 
@@ -56,7 +56,7 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 ```
 
 
-## Docker's useful commands
+## Docker's useful commands 📑
 ![Docker Commands Illustration](https://user-images.githubusercontent.com/57062736/139102966-25f28be1-f768-49bd-a8a1-915a8465de9e.png)
 
 
@@ -74,7 +74,7 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 
 - Remove all unused containers, volumes, networks and images: `docker system prune`
 
-## Installing Docker, Docker-compose and Composer
+## Installing Docker, Docker-compose and Composer 🛠
 ![Docker-composer](https://user-images.githubusercontent.com/57062736/141182130-b8ed2d7a-9a68-4387-b838-ba0d44bb4e0e.png)
 
 **Adjust the installation to your OS. Here you have the one for EC2(AWS) with CentOS**
@@ -108,3 +108,7 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 2. Moves the config file to the composer dir: `mv composer.phar /usr/local/bin/composer`
 
 3. Makes an direct access of `composer.phar` file: `ln -s /usr/local/bin/composer /usr/bin/composer`
+
+## ⭐ Feedback and bugs 🐞
+
+If you find any bug or just want to give your feedback (remember the ⭐ ^^), **Feel free to do it**. I am, as you, constantly learning and things change so quickly that... no one knows ^^
