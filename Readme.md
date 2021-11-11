@@ -95,7 +95,7 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 
 2. Make it executable from anywhere: `chmod +x /usr/local/bin/docker-compose`
 
-3. Makes it executable out of local `ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose`
+3. Makes an direct access for docker-compose: `ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose`
 
 4. Check the version and the installation: `docker-compose --version`
 
@@ -103,8 +103,8 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 - Composer installation
 
 
-1. Download and install Composer: `curl -sS https://getcomposer.org/installer | sudo php`
+1. Download and install Composer: `curl -sS https://getcomposer.org/installer | php`
 
 2. Moves the config file to the composer dir: `mv composer.phar /usr/local/bin/composer`
 
-3. Makes Composer executable out of the dir with the `composer.phar` file: `ln -s /usr/local/bin/composer /usr/bin/composer`
+3. Makes an direct access of `composer.phar` file: `ln -s /usr/local/bin/composer /usr/bin/composer`
