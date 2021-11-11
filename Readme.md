@@ -59,6 +59,13 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 ## Docker's useful commands
 ![Docker Commands Illustration](https://user-images.githubusercontent.com/57062736/139102966-25f28be1-f768-49bd-a8a1-915a8465de9e.png)
 
+- `bash: docker-compose: command not found` after installing? Do not worry 😀
+ 
+```
+curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)"  -o /usr/local/bin/docker-compose
+mv /usr/local/bin/docker-compose /usr/bin/docker-compose
+chmod +x /usr/bin/docker-compose
+```
 
 - Run Docker-compose: `docker-compose up -d` / `docker-compose up`
 
@@ -81,7 +88,7 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 #
 - Docker installation
 
-1. Download and install Docker: `yum install docker
+1. Download and install Docker: `yum install docker`
 
 2. Gives permisions so you can run it everywhere: `usermod -a -G docker ec2-user`
 
@@ -91,7 +98,7 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 #
 - Docker-compose installation
 
-1. Download and install Docker-compose: `curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+1. Download and install Docker-compose: `curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
 
 2. Make it executable from anywhere: `chmod +x /usr/local/bin/docker-compose`
 
