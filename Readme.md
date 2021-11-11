@@ -35,7 +35,7 @@ It is composed by 4 containers:
 
 6. If the step 5 did not work, go to the php container `docker-compose exec php bash`. Then, go to symfony folder and run `composer create-project symfony/skeleton NAME_OF_THE_PROJECT`. If you need to install **Composer** click [HERE](https://github.com/Inushin/dockerSymfonySSL#installing-docker-docker-compose-and-composer) or go to the end of this `.md` ^^
 
-6. Edit `data/nginx/web.conf` with your domain and youdr proyect dir.
+6. Edit `data/nginx/web.conf` with your domain and your proyect dir.
 
 7. Run `docker-compose down`
 
@@ -59,13 +59,6 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 ## Docker's useful commands
 ![Docker Commands Illustration](https://user-images.githubusercontent.com/57062736/139102966-25f28be1-f768-49bd-a8a1-915a8465de9e.png)
 
-- `bash: docker-compose: command not found` after installing? Do not worry 😀
- 
-```
-curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)"  -o /usr/local/bin/docker-compose
-mv /usr/local/bin/docker-compose /usr/bin/docker-compose
-chmod +x /usr/bin/docker-compose
-```
 
 - Run Docker-compose: `docker-compose up -d` / `docker-compose up`
 
@@ -102,7 +95,9 @@ chmod +x /usr/bin/docker-compose
 
 2. Make it executable from anywhere: `chmod +x /usr/local/bin/docker-compose`
 
-3. Check the version and the installation: `docker-compose --version`
+3. Makes it executable out of local `ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose`
+
+4. Check the version and the installation: `docker-compose --version`
 
 #
 - Composer installation
