@@ -29,6 +29,8 @@ It is composed by 4 containers:
 
 3. Edit `init` with your domain and an email.
 
+4. Edit the docker-compose.yml with your DB information. 
+
 4. Run `./init`.
 
 5. Generate your Symfony proyect going to `/data/php/symfony` and running `composer create-project symfony/skeleton NAME_OF_THE_PROJECT`
