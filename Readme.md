@@ -72,7 +72,9 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 
 - Copy a file to the docker we want to: `docker cp file docker_id:/dir`
 
-- Remove all unused containers, volumes, networks and images: `docker system prune`
+- Remove all dangling (not tagged or associated with a container) containers, volumes, networks and images: `docker system prune`
+
+- Remove all containers, volumes, networks and images: `docker system prune -a`
 
 ## Installing Docker, Docker-compose and Composer 🛠
 ![Docker-composer](https://user-images.githubusercontent.com/57062736/141182130-b8ed2d7a-9a68-4387-b838-ba0d44bb4e0e.png)
