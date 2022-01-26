@@ -1,5 +1,7 @@
 # 🐳 Docker + PHP 7.4 + MySQL8.0 + Nginx + Certbot(HTTPS) + Symfony 5 Boilerplate 🐳
 
+![symfony_logo](https://user-images.githubusercontent.com/57062736/151140439-1c8af7c8-5905-4a6f-a846-d988643ee76f.png)
+
 If you find this useful, remember about giving a start ⭐ to this repo or share it 🔁
 
 Edited from `https://github.com/ger86/symfony-docker` version -> `https://github.com/ger86/symfony-docker/tree/fc89a899ac58fb1f6ee5758377c001ad4ef4f389`
