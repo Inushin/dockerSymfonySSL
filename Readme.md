@@ -37,7 +37,7 @@ It is composed by 4 containers:
 
 6. Generate your Symfony proyect going to the php container `docker-compose exec php bash`. Then, go to symfony folder, `/var/www/certbot/phpDir/symfony`, and run `composer create-project symfony/skeleton NAME_OF_THE_PROJECT`. If you need to install **Composer** click [HERE](https://github.com/Inushin/dockerSymfonySSL#installing-docker-docker-compose-and-composer) or go to the end of this `.md` ^^
 
-7. Edit `data/nginx/web.conf` with your domain and your proyect dir.
+7. Edit `data/nginx/web.conf` with your domain and your project dir.
 
 8. Run `docker-compose down`
 
