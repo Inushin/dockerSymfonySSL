@@ -125,5 +125,5 @@ If you find any bug or just want to give your feedback (remember the ⭐ ^^), **
 
 ## Version control 📝
 
-0.0.0 - Adding the Version Control zone - 08/02/2022
-0.0.1 - Updated useful Docker commands - 10/02/2022
+- 0.0.0 - Adding the Version Control zone - 08/02/2022
+- 0.0.1 - Updated useful Docker commands - 10/02/2022
