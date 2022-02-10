@@ -76,7 +76,13 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 
 - Remove all dangling (not tagged or associated with a container) containers, volumes, networks and images: `docker system prune`
 
-- Remove all containers, volumes, networks and images: `docker system prune -a`
+- Remove all unused containers and images with at least one container associated to them: `docker system prune -a`
+
+- Shows all unused local images: `docker images ls -f dangling=true`
+
+- Shows all unused local volumes: `docker volume ls -f dangling=true`
+
+- Remove all local volumes not used by at least one container: `docker volume prune`
 
 ## Installing Docker, Docker-compose and Composer 🛠
 ![Docker-composer](https://user-images.githubusercontent.com/57062736/141182130-b8ed2d7a-9a68-4387-b838-ba0d44bb4e0e.png)
@@ -120,3 +126,4 @@ If you find any bug or just want to give your feedback (remember the ⭐ ^^), **
 ## Version control 📝
 
 0.0.0 - Adding the Version Control zone - 08/02/2022
+0.0.1 - Updated useful Docker commands - 10/02/2022
