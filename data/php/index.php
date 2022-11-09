@@ -1,3 +1,3 @@
 <?php
- echo "Your are running the INEX.PHP inside /data/php/";
+ echo "Your are running the INDEX.PHP inside /data/php/";
 ?>
