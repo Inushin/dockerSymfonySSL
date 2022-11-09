@@ -25,6 +25,7 @@ services:
        - default
      volumes:
        - ./data/nginx:/etc/nginx/conf.d/:rw
+       - ./data/php:/var/www/certbot/phpDir/:rw
        - ./data/certbot/conf:/etc/letsencrypt/:rw
        - ./data/certbot/www:/var/www/certbot/:rw
      command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
