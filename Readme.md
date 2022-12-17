@@ -125,6 +125,6 @@ If you find any bug or just want to give your feedback (remember the ⭐ ^^), **
 
 ## Version control 📝
 
-- 0.0.0 - Adding the Version Control zone - 08/02/2022
-- 0.0.1 - Updated useful Docker commands - 10/02/2022
-- 0.1.0 - Add new volume to NGINX with web files & Remove unneeded files and directories - 9/11/2022
+- 1.0 - Adding the Version Control zone - 08/02/2022
+- 1.1 - Updated useful Docker commands - 10/02/2022
+- [v2.0 - Current](https://github.com/Inushin/dockerSymfonySSL/tree/v2.0) - Add new volume to NGINX with web files & Remove unneeded files and directories - 9/11/2022
