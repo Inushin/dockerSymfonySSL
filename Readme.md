@@ -121,10 +121,10 @@ DATABASE_URL=mysql://db_user_name:db_user_pass@mysql:3306/db_name?serverVersion=
 
 ## ⭐ Feedback and bugs 🐞
 
-If you find any bug or just want to give your feedback (remember the ⭐ ^^), **Feel free to do it**. I am, as you, constantly learning and things change so quickly that... no one knows ^^
+If you find any bug or just want to give your feedback (remember the ⭐ ^^), **Feel free to do it**. I am, like you, constantly learning and things change so quickly that... no one knows ^^
 
 ## Version control 📝
 
-- 0.0.0 - Adding the Version Control zone - 08/02/2022
-- 0.0.1 - Updated useful Docker commands - 10/02/2022
-- 0.1.0 - Add new volume to NGINX with web files & Remove unneded files and directories - 9/11/2022
+- 1.0 - Adding the Version Control zone - 08/02/2022
+- 1.1 - Updated useful Docker commands - 10/02/2022
+- [v2.0 - Current](https://github.com/Inushin/dockerSymfonySSL/tree/v2.0) - Add new volume to NGINX with web files & Remove unneeded files and directories - 9/11/2022
